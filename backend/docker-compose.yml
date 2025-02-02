@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: habitguard
+      POSTGRES_USER: habitguard_user
+      POSTGRES_PASSWORD: CapstonePSQL!
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
